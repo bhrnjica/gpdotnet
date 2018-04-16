@@ -1,0 +1,60 @@
+﻿<Project Sdk="Microsoft.NET.Sdk" ToolsVersion="15.0">
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp2.0</TargetFramework>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>2.0</OldToolsVersion>
+    <RootNamespace>GPdotNet.Core.App</RootNamespace>
+    <SignAssembly>true</SignAssembly>
+    <DelaySign>false</DelaySign>
+    <AssemblyOriginatorKeyFile>..\..\GPdotNET.snk</AssemblyOriginatorKeyFile>
+    <AssemblyVersion>5.0.0.0</AssemblyVersion>
+    <FileVersion>5.0.0.0</FileVersion>
+    <Company />
+    <Product>GPdotNET v5.</Product>
+    <Authors>Bahrudin Hrnjica, bhrnjica@hotmail.com</Authors>
+    <PackageProjectUrl>http://bhrnjica.net/gpdotnet</PackageProjectUrl>
+    <PackageLicenseUrl>http://github.com/bhrnjica/gpdotnet/blob/master/license.md</PackageLicenseUrl>
+    <RepositoryUrl>http://github.com/bhrnjica/gpdotnet/</RepositoryUrl>
+    <Version>5.0.0</Version>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <LangVersion>latest</LangVersion>
+  </PropertyGroup>
+  <ItemGroup>
+    <None Remove="Data\data.txt" />
+    <None Remove="Data\input.txt" />
+    <None Remove="Data\iris.csv" />
+    <None Remove="Data\iris.gpa" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Data\data.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Data\input.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Data\iris.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Data\iris.gpa">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\..\GPdotNET.snk" Link="GPdotNET.snk" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json" Version="10.0.3" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Net.Core\GPdotNet.Core\GPdotNet.Core.csproj" />
+    <ProjectReference Include="..\..\Net.Core\GPdotNet.Interfaces\GPdotNet.Interfaces.csproj" />
+    <ProjectReference Include="..\GPdotNet.Data\GPdotNet.Data.csproj" />
+    <ProjectReference Include="..\GPdotNET.Math\GPdotNET.MathStuff.csproj" />
+    <ProjectReference Include="..\GPdotNET.Modeling\GPdotNet.Modeling.csproj" />
+  </ItemGroup>
+</Project>

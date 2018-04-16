@@ -1,0 +1,285 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{9564581D-0DCF-4EF4-92E7-30AFC346D4DA}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>GPdotNet.Wnd.Dll</RootNamespace>
+    <AssemblyName>GPdotNet.Wnd.Dll</AssemblyName>
+    <TargetFrameworkVersion>v4.7.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>TRACE;DEBUG</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>true</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>..\..\GPdotNET.snk</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="netstandard" />
+    <Reference Include="Newtonsoft.Json, Version=10.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Newtonsoft.Json.10.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http">
+      <HintPath>..\..\..\..\..\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.7\System.Net.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="ZedGraph">
+      <HintPath>..\..\packages\Zed\ZedGraph.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Controllers\AppController.cs" />
+    <Compile Include="Controllers\ModelController.cs" />
+    <Compile Include="Controllers\ProjectController.cs" />
+    <Compile Include="Dialogs\BModelEvaluation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\BModelEvaluation.Designer.cs">
+      <DependentUpon>BModelEvaluation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\ExportDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\ExportDialog.Designer.cs">
+      <DependentUpon>ExportDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\ImportExperimentalData.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\ImportExperimentalData.designer.cs">
+      <DependentUpon>ImportExperimentalData.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\MModelEvaluation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\MModelEvaluation.Designer.cs">
+      <DependentUpon>MModelEvaluation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\PromptBeforeRun.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\PromptBeforeRun.Designer.cs">
+      <DependentUpon>PromptBeforeRun.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\PromptForName.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\PromptForName.Designer.cs">
+      <DependentUpon>PromptForName.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\RModelEvaluation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\RModelEvaluation.Designer.cs">
+      <DependentUpon>RModelEvaluation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Extensions.cs" />
+    <Compile Include="GPPanels\ExperimentPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GPPanels\ExperimentPanel.Designer.cs">
+      <DependentUpon>ExperimentPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GPPanels\FunctionPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GPPanels\FunctionPanel.Designer.cs">
+      <DependentUpon>FunctionPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GPPanels\InfoPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GPPanels\InfoPanel.Designer.cs">
+      <DependentUpon>InfoPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GPPanels\ParametersPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GPPanels\ParametersPanel.Designer.cs">
+      <DependentUpon>ParametersPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GPPanels\PerformanceClassifier.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GPPanels\PerformanceClassifier.Designer.cs">
+      <DependentUpon>PerformanceClassifier.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GPPanels\ProjectInfoPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GPPanels\ProjectInfoPanel.Designer.cs">
+      <DependentUpon>ProjectInfoPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GPPanels\ResultPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GPPanels\ResultPanel.Designer.cs">
+      <DependentUpon>ResultPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GPPanels\RunPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GPPanels\RunPanel.Designer.cs">
+      <DependentUpon>RunPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GPPanels\StartPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GPPanels\StartPanel.Designer.cs">
+      <DependentUpon>StartPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GPPanels\TestPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GPPanels\TestPanel.Designer.cs">
+      <DependentUpon>TestPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GraphLayout\DPoint.cs" />
+    <Compile Include="GraphLayout\ITreeNode.cs" />
+    <Compile Include="GraphLayout\LayeredTreeDraw.cs" />
+    <Compile Include="GraphLayout\TreeConnection.cs" />
+    <Compile Include="GraphLayout\TreeNodeGroup.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RunPanelData.cs" />
+    <Compile Include="TestPanelData.cs" />
+    <Compile Include="TreeDrawers\TreeCtrlDrawer.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="TreeDrawers\TreeNodeDrawer.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Net.Core\GPdotNet.Core\GPdotNet.Core.csproj">
+      <Project>{fe5774dc-eb91-425c-86b7-51f792c78a3a}</Project>
+      <Name>GPdotNet.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Net.Core\GPdotNet.Data\GPdotNet.Data.csproj">
+      <Project>{01ad8460-3221-47c5-9ff3-38f12255fd96}</Project>
+      <Name>GPdotNet.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Net.Core\GPdotNet.Interfaces\GPdotNet.Interfaces.csproj">
+      <Project>{9df71459-9fae-460c-a923-9bb0214f5bc7}</Project>
+      <Name>GPdotNet.Interfaces</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Net.Core\GPdotNET.Math\GPdotNET.MathStuff.csproj">
+      <Project>{e4bdf9ac-32c1-4467-9ba9-64c240c16775}</Project>
+      <Name>GPdotNET.MathStuff</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Net.Core\GPdotNET.Modeling\GPdotNet.Modeling.csproj">
+      <Project>{eaec380c-051a-49d9-9e4b-6302ce1624fb}</Project>
+      <Name>GPdotNet.Modeling</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\GPdotNET.Export\GPdotNet.Export.csproj">
+      <Project>{dfc01f94-1528-4dd6-afbc-42def6433d18}</Project>
+      <Name>GPdotNet.Export</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Wnd.Ribbon\Wnd.Ribbon.csproj">
+      <Project>{46a18a55-5ae8-49ce-91cd-c7421b642e7e}</Project>
+      <Name>Wnd.Ribbon</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Dialogs\BModelEvaluation.resx">
+      <DependentUpon>BModelEvaluation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\ExportDialog.resx">
+      <DependentUpon>ExportDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\ImportExperimentalData.resx">
+      <DependentUpon>ImportExperimentalData.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\MModelEvaluation.resx">
+      <DependentUpon>MModelEvaluation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\PromptBeforeRun.resx">
+      <DependentUpon>PromptBeforeRun.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\PromptForName.resx">
+      <DependentUpon>PromptForName.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\RModelEvaluation.resx">
+      <DependentUpon>RModelEvaluation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GPPanels\ExperimentPanel.resx">
+      <DependentUpon>ExperimentPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GPPanels\FunctionPanel.resx">
+      <DependentUpon>FunctionPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GPPanels\InfoPanel.resx">
+      <DependentUpon>InfoPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GPPanels\ParametersPanel.resx">
+      <DependentUpon>ParametersPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GPPanels\PerformanceClassifier.resx">
+      <DependentUpon>PerformanceClassifier.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GPPanels\ProjectInfoPanel.resx">
+      <DependentUpon>ProjectInfoPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GPPanels\ResultPanel.resx">
+      <DependentUpon>ResultPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GPPanels\RunPanel.resx">
+      <DependentUpon>RunPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GPPanels\StartPanel.resx">
+      <DependentUpon>StartPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GPPanels\TestPanel.resx">
+      <DependentUpon>TestPanel.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\..\GPdotNET.snk">
+      <Link>GPdotNET.snk</Link>
+    </None>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Images\gpabout.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Images\gpdotnet.ico">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Images\gpLogo_350x134pix.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Images\hyperlink_32.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

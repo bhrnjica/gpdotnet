@@ -1,0 +1,28 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <SignAssembly>true</SignAssembly>
+    <AssemblyOriginatorKeyFile>..\..\GPdotNET.snk</AssemblyOriginatorKeyFile>
+    <AssemblyVersion>5.0.0.0</AssemblyVersion>
+    <FileVersion>5.0.0.0</FileVersion>
+    <Company />
+    <Product>GPdotNET v5.</Product>
+    <Authors>Bahrudin Hrnjica, bhrnjica@hotmail.com</Authors>
+    <PackageProjectUrl>http://bhrnjica.net/gpdotnet</PackageProjectUrl>
+    <PackageLicenseUrl>http://github.com/bhrnjica/gpdotnet/blob/master/license.md</PackageLicenseUrl>
+    <RepositoryUrl>http://github.com/bhrnjica/gpdotnet/</RepositoryUrl>
+    <Version>5.0.0</Version>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="..\..\GPdotNET.snk" Link="GPdotNET.snk" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\GPdotNet.Core\GPdotNet.Core.csproj" />
+    <ProjectReference Include="..\GPdotNet.Data\GPdotNet.Data.csproj" />
+    <ProjectReference Include="..\GPdotNet.Interfaces\GPdotNet.Interfaces.csproj" />
+  </ItemGroup>
+
+</Project>

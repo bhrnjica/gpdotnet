@@ -39,11 +39,6 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Win", "Win", "{C31017FE-8C7
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GPdotNET.MathStuff", "Net.Core\GPdotNET.Math\GPdotNET.MathStuff.csproj", "{E4BDF9AC-32C1-4467-9BA9-64C240C16775}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Doc", "Doc", "{6882D2CA-6BC1-462A-BBAE-18EADEB4BC65}"
-	ProjectSection(SolutionItems) = preProject
-		Docs\GPdotNETv5.pptx = Docs\GPdotNETv5.pptx
-	EndProjectSection
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU

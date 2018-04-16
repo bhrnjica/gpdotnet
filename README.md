@@ -42,4 +42,4 @@ The GPdotNET Start page contains several precalculated models which can be opene
 4. Lesson 3: How to Load a custom data set and create GP model (https://youtu.be/d04olbXFY_A)
 5. Lesson 4: Training models in GPdotNET (https://youtu.be/N9y8nuiuBk8)
 6. Lesson 5: Exporting GPdotNET models (https://youtu.be/uO9P-NHXoqU)
-7. Lesson 6: Handling with projext and related models(https://youtu.be/qEN4Ka4-n6c) 
+7. Lesson 6: Handling with project and related models(https://youtu.be/qEN4Ka4-n6c) 

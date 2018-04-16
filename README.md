@@ -1,5 +1,5 @@
 # Introduction
-![GPdotNET](Net\GPdotNET.Wnd.App\Images\gpLogo_start2.png)
+![GPdotNET](https://github.com/bhrnjica/gpdotnet/blob/master/Net/GPdotNET.Wnd.App/Images/gpLogo_start2.png)
 
 GPdotNET v5 is an open source computer program for running tree based genetic programming. GPdotNET started at 2006 to be a simple command line tool for GP application in modelling, and 3 years later GPdotNET published as an open source project. 
 This software version is GPdotNET v 5 specially developed for the book edition: Optimized Genetic Programming Applications: Emerging Research and Opportunities, published by IGI-Global and can be found at https://www.igi-global.com/book/optimized-genetic-programming-applications/195404. 

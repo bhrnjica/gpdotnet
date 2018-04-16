@@ -322,7 +322,7 @@
             this.ribbonTab1.Panels.Add(this.ribbonPanel2);
             this.ribbonTab1.Panels.Add(this.ribbonPanel3);
             this.ribbonTab1.Panels.Add(this.ribbonPanel4);
-            this.ribbonTab1.Text = "GPdotNET v5.01";
+            this.ribbonTab1.Text = "GPdotNET v5.1";
             // 
             // ribbonPanel1
             // 

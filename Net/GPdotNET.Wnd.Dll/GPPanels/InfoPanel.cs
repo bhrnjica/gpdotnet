@@ -2,7 +2,7 @@
 // GPdotNET Tree based genetic programming tool                                         //
 // Copyright 2006-2012 Bahrudin Hrnjica                                                 //
 //                                                                                      //
-// This code is free software under the GNU Library General Public License (LGPL)       //
+// This code is free software under the MIT License                                     //
 // See licence section of  http://gpdotnet.codeplex.com/license                         //
 //                                                                                      //
 // Bahrudin Hrnjica                                                                     //

@@ -13,7 +13,7 @@ namespace GPdotNET.ExcelAddIn
         //Example of usage in Excel: =Softmax(A1:A34)
         //Example of usage in Excel: =Softmax(A1:C1)
         [ExcelFunction(Description = "GPdotNET - SoftMax function")]
-        public static string Softmax(object arg)
+        public static object Softmax(object arg)
         {
             try
             {
@@ -28,7 +28,7 @@ namespace GPdotNET.ExcelAddIn
                     calculatedOutput.Add(ss);
                 }
 
-                return Softmax(calculatedOutput).ToString();
+                return Softmax(calculatedOutput);
             }
             catch(Exception ex)
             {
@@ -37,12 +37,12 @@ namespace GPdotNET.ExcelAddIn
 
         }
         [ExcelFunction(Description = "GPdotNET - SoftMax function")]
-        public static string Softmax2(double x1, double x2)
+        public static object Softmax2(double x1, double x2)
         {
            
             try
             {
-                return Softmax(new double[] { x1, x2 }).ToString();
+                return Softmax(new double[] { x1, x2 });
             }
             catch (Exception ex)
             {
@@ -52,12 +52,12 @@ namespace GPdotNET.ExcelAddIn
         }
 
         [ExcelFunction(Description = "GPdotNET - SoftMax function")]
-        public static string Softmax3(double x1, double x2, double x3)
+        public static object Softmax3(double x1, double x2, double x3)
         {
             
             try
             {
-                return Softmax(new double[] { x1, x2, x3 }).ToString();
+                return Softmax(new double[] { x1, x2, x3 });
             }
             catch (Exception ex)
             {
@@ -67,12 +67,12 @@ namespace GPdotNET.ExcelAddIn
         }
 
         [ExcelFunction(Description = "GPdotNET - SoftMax function")]
-        public static string Softmax4(double x1, double x2, double x3, double x4)
+        public static object Softmax4(double x1, double x2, double x3, double x4)
         {
            
             try
             {
-                return Softmax(new double[] { x1, x2, x3, x4 }).ToString();
+                return Softmax(new double[] { x1, x2, x3, x4 });
             }
             catch (Exception ex)
             {
@@ -82,7 +82,7 @@ namespace GPdotNET.ExcelAddIn
         }
 
         [ExcelFunction(Description = "GPdotNET - SoftMax function")]
-        public static string Softmax5(double x1, double x2, double x3, double x4, double x5)
+        public static object Softmax5(double x1, double x2, double x3, double x4, double x5)
         {
            
             try
@@ -97,13 +97,13 @@ namespace GPdotNET.ExcelAddIn
         }
 
         [ExcelFunction(Description = "GPdotNET - SoftMax function")]
-        public static string Softmax6(double x1, double x2, double x3, double x4, double x5, double x6)
+        public static object Softmax6(double x1, double x2, double x3, double x4, double x5, double x6)
         {
            
 
             try
             {
-                return Softmax(new double[] { x1, x2, x3, x4, x5, x6 }).ToString();
+                return Softmax(new double[] { x1, x2, x3, x4, x5, x6 });
             }
             catch (Exception ex)
             {
@@ -113,12 +113,12 @@ namespace GPdotNET.ExcelAddIn
         }
 
         [ExcelFunction(Description = "GPdotNET - SoftMax function")]
-        public static string Softmax7(double x1, double x2, double x3, double x4, double x5, double x6, double x7)
+        public static object Softmax7(double x1, double x2, double x3, double x4, double x5, double x6, double x7)
         {
             
             try
             {
-                return Softmax(new double[] { x1, x2, x3, x4, x5, x6, x7 }).ToString();
+                return Softmax(new double[] { x1, x2, x3, x4, x5, x6, x7 });
             }
             catch (Exception ex)
             {
@@ -128,12 +128,12 @@ namespace GPdotNET.ExcelAddIn
         }
 
         [ExcelFunction(Description = "GPdotNET - SoftMax function")]
-        public static string Softmax8(double x1, double x2, double x3, double x4, double x5, double x6, double x7, double x8)
+        public static object Softmax8(double x1, double x2, double x3, double x4, double x5, double x6, double x7, double x8)
         {
             
             try
             {
-                return Softmax(new double[] { x1, x2, x3, x4, x5, x6, x7, x8 }).ToString();
+                return Softmax(new double[] { x1, x2, x3, x4, x5, x6, x7, x8 });
             }
             catch (Exception ex)
             {
@@ -143,12 +143,12 @@ namespace GPdotNET.ExcelAddIn
         }
 
         [ExcelFunction(Description = "GPdotNET - SoftMax function")]
-        public static string Softmax9(double x1, double x2, double x3, double x4, double x5, double x6, double x7, double x8, double x9)
+        public static object Softmax9(double x1, double x2, double x3, double x4, double x5, double x6, double x7, double x8, double x9)
         {
            
             try
             {
-                return Softmax(new double[] { x1, x2, x3, x4, x5, x6, x7, x8, x9 }).ToString();
+                return Softmax(new double[] { x1, x2, x3, x4, x5, x6, x7, x8, x9 });
             }
             catch (Exception ex)
             {
@@ -158,11 +158,11 @@ namespace GPdotNET.ExcelAddIn
         }
 
         [ExcelFunction(Description = "GPdotNET - SoftMax function")]
-        public static string Softmax10(double x1, double x2, double x3, double x4, double x5, double x6, double x7, double x8, double x9, double x10)
+        public static object Softmax10(double x1, double x2, double x3, double x4, double x5, double x6, double x7, double x8, double x9, double x10)
         {
             try
             {
-                return Softmax(new double[] { x1, x2, x3, x4, x5, x6, x7, x8, x9, x10 }).ToString();
+                return Softmax(new double[] { x1, x2, x3, x4, x5, x6, x7, x8, x9, x10 });
             }
             catch (Exception ex)
             {
@@ -173,11 +173,11 @@ namespace GPdotNET.ExcelAddIn
         }
 
         [ExcelFunction(Description = "GPdotNET - SoftMax function")]
-        public static string Softmax11(double x1, double x2, double x3, double x4, double x5, double x6, double x7, double x8, double x9, double x10, double x11)
+        public static object Softmax11(double x1, double x2, double x3, double x4, double x5, double x6, double x7, double x8, double x9, double x10, double x11)
         {
             try
             {
-                return Softmax(new double[] { x1, x2, x3, x4, x5, x6, x7, x8, x9, x10, x11 }).ToString();
+                return Softmax(new double[] { x1, x2, x3, x4, x5, x6, x7, x8, x9, x10, x11 });
             }
             catch (Exception ex)
             {
@@ -187,11 +187,11 @@ namespace GPdotNET.ExcelAddIn
 
         }
         [ExcelFunction(Description = "GPdotNET - SoftMax function")]
-        public static string Softmax12(double x1, double x2, double x3, double x4, double x5, double x6, double x7, double x8, double x9, double x10, double x11, double x12)
+        public static object Softmax12(double x1, double x2, double x3, double x4, double x5, double x6, double x7, double x8, double x9, double x10, double x11, double x12)
         {
             try
             {
-                return Softmax(new double[] { x1, x2, x3, x4, x5, x6, x7, x8, x9, x10, x11, x12 }).ToString();
+                return Softmax(new double[] { x1, x2, x3, x4, x5, x6, x7, x8, x9, x10, x11, x12 });
             }
             catch (Exception ex)
             {

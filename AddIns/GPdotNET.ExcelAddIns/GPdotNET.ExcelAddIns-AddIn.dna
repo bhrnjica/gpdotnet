@@ -1,5 +1,5 @@
-<DnaLibrary Name="GPdotNET.ExcelAddIn Add-In" RuntimeVersion="v4.0">
-  <ExternalLibrary Path="GPdotNET.ExcelAddIn.dll" LoadFromBytes="true" Pack="true" />
+<DnaLibrary Name="GPdotNET.ExcelAddIns Add-In" RuntimeVersion="v4.0">
+  <ExternalLibrary Path="GPdotNET.ExcelAddIns.dll" ExplicitExports="false" LoadFromBytes="true" Pack="true" />
   
   <!-- 
        The RuntimeVersion attribute above allows two settings:

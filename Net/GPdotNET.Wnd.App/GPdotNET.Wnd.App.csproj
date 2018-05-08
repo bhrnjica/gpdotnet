@@ -74,8 +74,8 @@
     <Reference Include="System.Drawing" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
-    <Reference Include="ZedGraph">
-      <HintPath>..\..\packages\Zed\ZedGraph.dll</HintPath>
+    <Reference Include="ZedGraph, Version=5.1.7.430, Culture=neutral, PublicKeyToken=02a83cbd123fcd60, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\ZedGraph.5.1.7\lib\net35-Client\ZedGraph.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
@@ -111,6 +111,7 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="License-LGPL.txt" />
     <Content Include="ToDo.txt" />
     <None Include="..\..\GPdotNET.snk">
       <Link>GPdotNET.snk</Link>
@@ -153,12 +154,11 @@
     <Content Include="Resources\segment_model.gpa">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="Resources\GPdotNET_User_Guide.pdf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\AddIns\GPdotNET.ExcelAddIn\GPdotNET.ExcelAddIn.csproj">
-      <Project>{38293340-0f30-4e03-9da7-8358803e2eb6}</Project>
-      <Name>GPdotNET.ExcelAddIn</Name>
-    </ProjectReference>
     <ProjectReference Include="..\..\Net.Core\GPdotNet.Core\GPdotNet.Core.csproj">
       <Project>{fe5774dc-eb91-425c-86b7-51f792c78a3a}</Project>
       <Name>GPdotNet.Core</Name>

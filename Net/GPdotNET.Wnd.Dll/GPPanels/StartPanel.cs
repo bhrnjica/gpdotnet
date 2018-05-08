@@ -76,7 +76,7 @@ namespace GPdotNet.Wnd.GUI
         {
             try
             {
-                string strPath = Application.StartupPath + "\\Resources_Files\\GPdotNET_User_Guide.pdf";
+                string strPath = Application.StartupPath + "\\Resources\\GPdotNET_User_Guide.pdf";
                 System.Diagnostics.Process.Start(strPath);
                 // txtStatusMessage.Text = "Ready!"; ex
             }

@@ -500,7 +500,7 @@ namespace GPdotNet.Modeling
 
         private void ResetModel()
         {
-            //throw new NotImplementedException();
+            
         }
 
         public double[] calculateOutput(bool isTraining, bool probValue=false)

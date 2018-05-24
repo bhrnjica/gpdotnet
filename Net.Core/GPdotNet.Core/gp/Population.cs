@@ -477,7 +477,7 @@ namespace GPdotNet.Core
 
         private Chromosome RankSelection(List<IChromosome> ch, Parameters par)
         {
-            if (ch == null || par == null || ch.Count == 0 || par.ArgValue<0 || par.ArgValue > 2)
+            if (ch == null || par == null || ch.Count == 0 || par.ArgValue < 0 || par.ArgValue > 2)
                 throw new Exception("Population cannot be empty.");
 
             //parameters of the selection

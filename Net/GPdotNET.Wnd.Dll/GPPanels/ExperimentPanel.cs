@@ -624,6 +624,8 @@ namespace GPdotNet.Wnd.GUI
         /// <returns></returns>
         private string[][] ParseData(MetaColumn[] metaCols)
         {
+            if (metaCols == null)
+                return null;
             int metadataRows = 6;
             int metadataColumns = 1;
             string[][] data = new string[listView1.Items.Count - metadataRows][];
@@ -659,6 +661,11 @@ namespace GPdotNet.Wnd.GUI
 
         public void SetDataSet(DataSet1 dataSet)
         {
+            if(dataSet==null)
+            {
+                ResetExperimentalPanel();
+                return;
+            }
             setColumn(dataSet.MetaData.ToList());
             setData(dataSet.Data);
             numCtrlNumForTest.Value = dataSet.TestRows;

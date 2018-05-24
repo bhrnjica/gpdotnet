@@ -505,6 +505,8 @@ namespace GPdotNet.Data
             for (int i = 0; i < m_RealValues.Length; i++)
             {
                 string str = m_RealValues[i];
+                if (str.StartsWith("−"))
+                    str.Replace("−", "-");
                 double v;
                 if (double.TryParse(str, NumberStyles.Any, CultureInfo.InvariantCulture, out v))
                     m_NumericValues[i] = v;

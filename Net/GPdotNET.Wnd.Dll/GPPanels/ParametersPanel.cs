@@ -621,8 +621,8 @@ namespace GPdotNet.Wnd.GUI
             dic.Add("Threshold", $"{float.Parse(eb_cutOff.Text).ToString(CultureInfo.InvariantCulture)}");
             dic.Add("ParallelProcessing", $"{radioIsParallel.Checked}");
             dic.Add("Elitism", $"{txtElitism.Text}");
-            dic.Add("TourSize", $"{txtSelParam1.Text}");
-            dic.Add("ArgValue", $"{txtSelParam1.Text}");
+            //dic.Add("TourSize", $"{txtSelParam1.Text}");
+            dic.Add("ArgValue", $"{float.Parse(txtSelParam1.Text).ToString(CultureInfo.InvariantCulture)}");// $"{txtSelParam1.Text}");
             dic.Add("ConstFrom", $"{float.Parse(txtRandomConsFrom.Text).ToString(CultureInfo.InvariantCulture)}");
             dic.Add("ConstTo", $"{float.Parse(txtRandomConsTo.Text).ToString(CultureInfo.InvariantCulture)}");
             dic.Add("ConstNum", $"{int.Parse(txtRandomConstNum.Text)}");
@@ -634,7 +634,7 @@ namespace GPdotNet.Wnd.GUI
                 for (int i = 0; i < Constances.Length; i++)
                 {
                     var key = $"C{i}";
-                    var value = $"{Constances[i]}";
+                    var value = $"{Constances[i].ToString(CultureInfo.InvariantCulture)}";
                     dic.Add(key, value);
                 }
             }

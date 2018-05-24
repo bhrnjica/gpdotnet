@@ -322,10 +322,10 @@ namespace GPdotNet.Wnd.App
                     testPanel1.ResetChart();
                 }
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-
-                throw;
+                ReportException(ex);
+                //throw;
             }
             finally
             {

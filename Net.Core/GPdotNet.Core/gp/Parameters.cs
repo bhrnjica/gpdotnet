@@ -298,7 +298,7 @@ namespace GPdotNet.Core
                 for(int i=0; i< ConstNum; i++)
                 {
                     var key = $"C{i}";
-                    var value = $"{Constants[i]}";
+                    var value = $"{Constants[i].ToString(CultureInfo.InvariantCulture)}";
                     dic.Add(key, value);
                 }
             }

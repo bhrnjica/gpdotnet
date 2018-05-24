@@ -32,7 +32,14 @@ namespace GPdotNET.ExcelAddIn
         [ExcelFunction(Description = "GPdotNET Scaled Sigmoid function")]
         public static double SSigmoid(double value, double scale)
         {
-            return scale / (1.0 + Math.Exp(-value));
+            var val= scale / (1.0 + Math.Exp(-value));
+
+            if (val > scale)
+                return scale;
+            else
+            {
+                return Math.Floor(val);
+            }
         }
        
         

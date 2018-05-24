@@ -77,7 +77,7 @@ namespace GPdotNet.Wnd.Dll
         }
 
         /// <summary>
-        /// Check if the current state of projects different from the persisted version
+        /// Check if the current state of project is different from the persisted version
         /// Also Update ActualData Vie with values from GUI
         /// </summary>
         /// <param name="exp"></param>

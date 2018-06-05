@@ -1,3 +1,11 @@
+# Latest release
+
+* may, 24, 2018: ![GPdotNET v5.1.24.05.2018](https://github.com/bhrnjica/gpdotnet/releases/tag/v5.1.24.05.2018) -brings few bug-fixes recognized on non English PCs, which identified the localization issues with comma decimal symbol. 
+
+* april, 16, 2018: ![GPdotNET version 5.1.16.04.2018] (https://github.com/bhrnjica/gpdotnet/releases/tag/v5.1)- version 5.1 which brings few new features e.g.:encoding category columns, application improvements, ...
+
+* april, 8, 2018, ![GPdotNET v5.0 - Book Edition](https://github.com/bhrnjica/gpdotnet/releases/tag/BookRelease) - after a year of development, finally GPdoNET v5 is out along my new book *Optimized Genetic Programming*.
+
 # Introduction
 ![GPdotNET](https://github.com/bhrnjica/gpdotnet/blob/master/Net/GPdotNET.Wnd.App/Images/gpLogo_start2.png)
 

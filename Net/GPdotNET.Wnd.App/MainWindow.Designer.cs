@@ -52,9 +52,6 @@
             this.ribbonPanel1 = new System.Windows.Forms.RibbonPanel();
             this.ribbonButton2 = new System.Windows.Forms.RibbonButton();
             this.ribbonButton3 = new System.Windows.Forms.RibbonButton();
-            this.ribbonButton12 = new System.Windows.Forms.RibbonButton();
-            this.ribbonButton14 = new System.Windows.Forms.RibbonButton();
-            this.ribbonButton15 = new System.Windows.Forms.RibbonButton();
             this.ribbonButton4 = new System.Windows.Forms.RibbonButton();
             this.ribbonButtonList1 = new System.Windows.Forms.RibbonButtonList();
             this.ribbonSeparator1 = new System.Windows.Forms.RibbonSeparator();
@@ -73,6 +70,8 @@
             this.ribbonButton1 = new System.Windows.Forms.RibbonButton();
             this.ribbonDescriptionMenuItem2 = new System.Windows.Forms.RibbonDescriptionMenuItem();
             this.ribbonDescriptionMenuItem3 = new System.Windows.Forms.RibbonDescriptionMenuItem();
+            this.ribbonButton31 = new System.Windows.Forms.RibbonButton();
+            this.ribbonButton32 = new System.Windows.Forms.RibbonButton();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -87,8 +86,8 @@
             this.splitContainer1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.splitContainer1.Location = new System.Drawing.Point(0, 102);
-            this.splitContainer1.Margin = new System.Windows.Forms.Padding(5);
+            this.splitContainer1.Location = new System.Drawing.Point(0, 196);
+            this.splitContainer1.Margin = new System.Windows.Forms.Padding(10, 10, 10, 10);
             this.splitContainer1.Name = "splitContainer1";
             // 
             // splitContainer1.Panel1
@@ -100,9 +99,9 @@
             this.splitContainer1.Panel2.Controls.Add(this.tabControl2);
             this.splitContainer1.Panel2.Controls.Add(this.tabControl1);
             this.splitContainer1.Panel2.Controls.Add(this.startPanel1);
-            this.splitContainer1.Size = new System.Drawing.Size(935, 395);
-            this.splitContainer1.SplitterDistance = 170;
-            this.splitContainer1.SplitterWidth = 3;
+            this.splitContainer1.Size = new System.Drawing.Size(1870, 760);
+            this.splitContainer1.SplitterDistance = 340;
+            this.splitContainer1.SplitterWidth = 6;
             this.splitContainer1.TabIndex = 1;
             // 
             // treeView1
@@ -121,7 +120,7 @@
             this.treeView1.Nodes.AddRange(new System.Windows.Forms.TreeNode[] {
             treeNode1});
             this.treeView1.SelectedImageIndex = 0;
-            this.treeView1.Size = new System.Drawing.Size(170, 395);
+            this.treeView1.Size = new System.Drawing.Size(340, 760);
             this.treeView1.TabIndex = 0;
             this.treeView1.AfterLabelEdit += new System.Windows.Forms.NodeLabelEditEventHandler(this.treeView1_AfterLabelEdit);
             this.treeView1.BeforeSelect += new System.Windows.Forms.TreeViewCancelEventHandler(this.treeView1_BeforeSelect);
@@ -146,19 +145,21 @@
             this.tabControl2.Controls.Add(this.tabPage7);
             this.tabControl2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tabControl2.Location = new System.Drawing.Point(0, 0);
+            this.tabControl2.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.tabControl2.Name = "tabControl2";
             this.tabControl2.SelectedIndex = 0;
-            this.tabControl2.Size = new System.Drawing.Size(762, 395);
+            this.tabControl2.Size = new System.Drawing.Size(1524, 760);
             this.tabControl2.TabIndex = 2;
             this.tabControl2.Visible = false;
             // 
             // tabPage3
             // 
             this.tabPage3.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.tabPage3.Location = new System.Drawing.Point(4, 22);
+            this.tabPage3.Location = new System.Drawing.Point(8, 39);
+            this.tabPage3.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(754, 369);
+            this.tabPage3.Padding = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.tabPage3.Size = new System.Drawing.Size(1508, 713);
             this.tabPage3.TabIndex = 0;
             this.tabPage3.Text = "Functions";
             this.tabPage3.UseVisualStyleBackColor = true;
@@ -166,10 +167,11 @@
             // tabPage4
             // 
             this.tabPage4.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.tabPage4.Location = new System.Drawing.Point(4, 22);
+            this.tabPage4.Location = new System.Drawing.Point(8, 39);
+            this.tabPage4.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.tabPage4.Name = "tabPage4";
-            this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage4.Size = new System.Drawing.Size(754, 369);
+            this.tabPage4.Padding = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.tabPage4.Size = new System.Drawing.Size(1508, 713);
             this.tabPage4.TabIndex = 1;
             this.tabPage4.Text = "Parameters";
             this.tabPage4.UseVisualStyleBackColor = true;
@@ -177,10 +179,11 @@
             // tabPage5
             // 
             this.tabPage5.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.tabPage5.Location = new System.Drawing.Point(4, 22);
+            this.tabPage5.Location = new System.Drawing.Point(8, 39);
+            this.tabPage5.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.tabPage5.Name = "tabPage5";
-            this.tabPage5.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage5.Size = new System.Drawing.Size(754, 369);
+            this.tabPage5.Padding = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.tabPage5.Size = new System.Drawing.Size(1508, 713);
             this.tabPage5.TabIndex = 2;
             this.tabPage5.Text = "Run";
             this.tabPage5.UseVisualStyleBackColor = true;
@@ -188,10 +191,11 @@
             // tabPage6
             // 
             this.tabPage6.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.tabPage6.Location = new System.Drawing.Point(4, 22);
+            this.tabPage6.Location = new System.Drawing.Point(8, 39);
+            this.tabPage6.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.tabPage6.Name = "tabPage6";
-            this.tabPage6.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage6.Size = new System.Drawing.Size(754, 369);
+            this.tabPage6.Padding = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.tabPage6.Size = new System.Drawing.Size(1508, 713);
             this.tabPage6.TabIndex = 3;
             this.tabPage6.Text = "Solution";
             this.tabPage6.UseVisualStyleBackColor = true;
@@ -199,10 +203,11 @@
             // tabPage7
             // 
             this.tabPage7.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.tabPage7.Location = new System.Drawing.Point(4, 22);
+            this.tabPage7.Location = new System.Drawing.Point(8, 39);
+            this.tabPage7.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.tabPage7.Name = "tabPage7";
-            this.tabPage7.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage7.Size = new System.Drawing.Size(754, 369);
+            this.tabPage7.Padding = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.tabPage7.Size = new System.Drawing.Size(1508, 713);
             this.tabPage7.TabIndex = 4;
             this.tabPage7.Text = "Validation";
             this.tabPage7.UseVisualStyleBackColor = true;
@@ -213,19 +218,21 @@
             this.tabControl1.Controls.Add(this.tabPage2);
             this.tabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tabControl1.Location = new System.Drawing.Point(0, 0);
+            this.tabControl1.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(762, 395);
+            this.tabControl1.Size = new System.Drawing.Size(1524, 760);
             this.tabControl1.TabIndex = 1;
             this.tabControl1.Visible = false;
             // 
             // tabPage1
             // 
             this.tabPage1.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.tabPage1.Location = new System.Drawing.Point(4, 22);
+            this.tabPage1.Location = new System.Drawing.Point(8, 39);
+            this.tabPage1.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(754, 369);
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.tabPage1.Size = new System.Drawing.Size(1508, 713);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Data";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -233,10 +240,11 @@
             // tabPage2
             // 
             this.tabPage2.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.tabPage2.Location = new System.Drawing.Point(4, 22);
+            this.tabPage2.Location = new System.Drawing.Point(8, 39);
+            this.tabPage2.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(754, 369);
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.tabPage2.Size = new System.Drawing.Size(1508, 713);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Info";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -246,11 +254,11 @@
             this.startPanel1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.startPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.startPanel1.Location = new System.Drawing.Point(0, 0);
-            this.startPanel1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.startPanel1.Margin = new System.Windows.Forms.Padding(8, 10, 8, 10);
             this.startPanel1.Name = "startPanel1";
             this.startPanel1.New = null;
             this.startPanel1.Open = null;
-            this.startPanel1.Size = new System.Drawing.Size(762, 395);
+            this.startPanel1.Size = new System.Drawing.Size(1524, 760);
             this.startPanel1.TabIndex = 0;
             // 
             // statusStrip1
@@ -260,23 +268,24 @@
             this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripStatusLabel1,
             this.toolStripStatusLabel2});
-            this.statusStrip1.Location = new System.Drawing.Point(0, 499);
+            this.statusStrip1.Location = new System.Drawing.Point(0, 965);
             this.statusStrip1.Name = "statusStrip1";
-            this.statusStrip1.Size = new System.Drawing.Size(935, 22);
+            this.statusStrip1.Padding = new System.Windows.Forms.Padding(2, 0, 28, 0);
+            this.statusStrip1.Size = new System.Drawing.Size(1870, 37);
             this.statusStrip1.TabIndex = 2;
             this.statusStrip1.Text = "statusStrip1";
             // 
             // toolStripStatusLabel1
             // 
             this.toolStripStatusLabel1.Name = "toolStripStatusLabel1";
-            this.toolStripStatusLabel1.Size = new System.Drawing.Size(42, 17);
+            this.toolStripStatusLabel1.Size = new System.Drawing.Size(84, 32);
             this.toolStripStatusLabel1.Text = "Ready.";
             // 
             // toolStripStatusLabel2
             // 
             this.toolStripStatusLabel2.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.toolStripStatusLabel2.Name = "toolStripStatusLabel2";
-            this.toolStripStatusLabel2.Size = new System.Drawing.Size(878, 17);
+            this.toolStripStatusLabel2.Size = new System.Drawing.Size(1756, 32);
             this.toolStripStatusLabel2.Spring = true;
             this.toolStripStatusLabel2.Text = "No application message!";
             this.toolStripStatusLabel2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -289,7 +298,7 @@
             this.ribbon1.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.ribbon1.ForeColor = System.Drawing.Color.DarkViolet;
             this.ribbon1.Location = new System.Drawing.Point(0, 0);
-            this.ribbon1.Margin = new System.Windows.Forms.Padding(2);
+            this.ribbon1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.ribbon1.Minimized = false;
             this.ribbon1.Name = "ribbon1";
             // 
@@ -307,7 +316,7 @@
             // 
             this.ribbon1.QuickAccessToolbar.Text = "";
             this.ribbon1.RibbonTabFont = new System.Drawing.Font("Trebuchet MS", 9F);
-            this.ribbon1.Size = new System.Drawing.Size(935, 102);
+            this.ribbon1.Size = new System.Drawing.Size(1870, 196);
             this.ribbon1.TabIndex = 0;
             this.ribbon1.Tabs.Add(this.ribbonTab1);
             this.ribbon1.TabsMargin = new System.Windows.Forms.Padding(5, 2, 20, 0);
@@ -330,7 +339,8 @@
             this.ribbonPanel1.ButtonMoreVisible = false;
             this.ribbonPanel1.Items.Add(this.ribbonButton2);
             this.ribbonPanel1.Items.Add(this.ribbonButton3);
-            this.ribbonPanel1.Items.Add(this.ribbonButton12);
+            this.ribbonPanel1.Items.Add(this.ribbonButton31);
+            this.ribbonPanel1.Items.Add(this.ribbonButton32);
             this.ribbonPanel1.Items.Add(this.ribbonButton4);
             this.ribbonPanel1.Name = "ribbonPanel1";
             this.ribbonPanel1.Text = "Standard";
@@ -360,45 +370,6 @@
             this.ribbonButton3.ToolTipImage = global::GPdotNet.Wnd.App.Properties.Resources.opengp16;
             this.ribbonButton3.ToolTipTitle = "Open existing GPdotNET project (Alt+O)";
             this.ribbonButton3.Click += new System.EventHandler(this.Open_Click);
-            // 
-            // ribbonButton12
-            // 
-            this.ribbonButton12.DropDownItems.Add(this.ribbonButton14);
-            this.ribbonButton12.DropDownItems.Add(this.ribbonButton15);
-            this.ribbonButton12.Image = global::GPdotNet.Wnd.App.Properties.Resources.savegp16;
-            this.ribbonButton12.LargeImage = global::GPdotNet.Wnd.App.Properties.Resources.savegp16;
-            this.ribbonButton12.Name = "ribbonButton12";
-            this.ribbonButton12.SmallImage = global::GPdotNet.Wnd.App.Properties.Resources.savegp24;
-            this.ribbonButton12.Style = System.Windows.Forms.RibbonButtonStyle.DropDown;
-            this.ribbonButton12.Text = "Save";
-            // 
-            // ribbonButton14
-            // 
-            this.ribbonButton14.AltKey = "S";
-            this.ribbonButton14.DropDownArrowDirection = System.Windows.Forms.RibbonArrowDirection.Left;
-            this.ribbonButton14.Image = global::GPdotNet.Wnd.App.Properties.Resources.savegp16;
-            this.ribbonButton14.LargeImage = global::GPdotNet.Wnd.App.Properties.Resources.savegp16;
-            this.ribbonButton14.Name = "ribbonButton14";
-            this.ribbonButton14.SmallImage = global::GPdotNet.Wnd.App.Properties.Resources.savegp24;
-            this.ribbonButton14.Text = "Save";
-            this.ribbonButton14.ToolTip = "In case of new project, file save dialog will appear.";
-            this.ribbonButton14.ToolTipImage = global::GPdotNet.Wnd.App.Properties.Resources.savegp16;
-            this.ribbonButton14.ToolTipTitle = "Save current changes for selected GPdotNET project (Alt +S)";
-            this.ribbonButton14.Click += new System.EventHandler(this.Save_Click);
-            // 
-            // ribbonButton15
-            // 
-            this.ribbonButton15.AltKey = "A";
-            this.ribbonButton15.DropDownArrowDirection = System.Windows.Forms.RibbonArrowDirection.Left;
-            this.ribbonButton15.Image = global::GPdotNet.Wnd.App.Properties.Resources.savegp16;
-            this.ribbonButton15.LargeImage = global::GPdotNet.Wnd.App.Properties.Resources.savegp16;
-            this.ribbonButton15.Name = "ribbonButton15";
-            this.ribbonButton15.SmallImage = global::GPdotNet.Wnd.App.Properties.Resources.savegp24;
-            this.ribbonButton15.Text = "Save As";
-            this.ribbonButton15.ToolTip = "Use this command for saving current project in to different file.";
-            this.ribbonButton15.ToolTipImage = global::GPdotNet.Wnd.App.Properties.Resources.savegp16;
-            this.ribbonButton15.ToolTipTitle = "Save selected GPdotNET proejct to new file on disk (Alt+A)";
-            this.ribbonButton15.Click += new System.EventHandler(this.SaveAs_Click);
             // 
             // ribbonButton4
             // 
@@ -596,19 +567,39 @@
             this.ribbonDescriptionMenuItem3.SmallImage = ((System.Drawing.Image)(resources.GetObject("ribbonDescriptionMenuItem3.SmallImage")));
             this.ribbonDescriptionMenuItem3.Text = "ribbonDescriptionMenuItem3";
             // 
+            // ribbonButton31
+            // 
+            this.ribbonButton31.AltKey = "S";
+            this.ribbonButton31.Image = global::GPdotNet.Wnd.App.Properties.Resources.savegp16;
+            this.ribbonButton31.LargeImage = global::GPdotNet.Wnd.App.Properties.Resources.savegp16;
+            this.ribbonButton31.Name = "ribbonButton31";
+            this.ribbonButton31.SmallImage = global::GPdotNet.Wnd.App.Properties.Resources.savegp24;
+            this.ribbonButton31.Text = "Save";
+            this.ribbonButton31.Click += new System.EventHandler(this.Save_Click);
+            // 
+            // ribbonButton32
+            // 
+            this.ribbonButton32.AltKey = "A";
+            this.ribbonButton32.Image = global::GPdotNet.Wnd.App.Properties.Resources.savegp16;
+            this.ribbonButton32.LargeImage = global::GPdotNet.Wnd.App.Properties.Resources.savegp16;
+            this.ribbonButton32.Name = "ribbonButton32";
+            this.ribbonButton32.SmallImage = global::GPdotNet.Wnd.App.Properties.Resources.savegp24;
+            this.ribbonButton32.Text = "Save As";
+            this.ribbonButton32.Click += new System.EventHandler(this.SaveAs_Click);
+            // 
             // MainWindow
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
-            this.ClientSize = new System.Drawing.Size(935, 521);
+            this.ClientSize = new System.Drawing.Size(1870, 1002);
             this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.splitContainer1);
             this.Controls.Add(this.ribbon1);
             this.ForeColor = System.Drawing.Color.DarkViolet;
             this.KeyPreview = true;
-            this.Margin = new System.Windows.Forms.Padding(2);
-            this.MinimumSize = new System.Drawing.Size(898, 554);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.MinimumSize = new System.Drawing.Size(1770, 1000);
             this.Name = "MainWindow";
             this.splitContainer1.Panel1.ResumeLayout(false);
             this.splitContainer1.Panel2.ResumeLayout(false);
@@ -645,12 +636,9 @@
         private System.Windows.Forms.RibbonButtonList ribbonButtonList1;
         private System.Windows.Forms.RibbonSeparator ribbonSeparator1;
         private System.Windows.Forms.RibbonItemGroup ribbonItemGroup1;
-        private System.Windows.Forms.RibbonButton ribbonButton12;
         private System.Windows.Forms.RibbonDescriptionMenuItem ribbonDescriptionMenuItem1;
         private System.Windows.Forms.RibbonDescriptionMenuItem ribbonDescriptionMenuItem2;
         private System.Windows.Forms.RibbonDescriptionMenuItem ribbonDescriptionMenuItem3;
-        private System.Windows.Forms.RibbonButton ribbonButton14;
-        private System.Windows.Forms.RibbonButton ribbonButton15;
         private System.Windows.Forms.SplitContainer splitContainer1;
         private System.Windows.Forms.TreeView treeView1;
         private System.Windows.Forms.ImageList imageList1;
@@ -670,6 +658,8 @@
         private System.Windows.Forms.TabPage tabPage5;
         private System.Windows.Forms.TabPage tabPage6;
         private System.Windows.Forms.TabPage tabPage7;
+        private System.Windows.Forms.RibbonButton ribbonButton31;
+        private System.Windows.Forms.RibbonButton ribbonButton32;
     }
 }
 

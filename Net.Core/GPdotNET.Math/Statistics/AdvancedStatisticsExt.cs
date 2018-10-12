@@ -24,6 +24,44 @@ namespace GPdotNet.MathStuff
     public static class AdvancedStatistics
     {
         /// <summary>
+        /// Calculate Classification Accuracy
+        /// </summary>
+        /// <param name="obsData">Observer data</param>
+        /// <param name="preData">Predicted data</param>
+        /// <returns></returns>
+        public static double CA(this double[] obsData, double[] preData)
+        {
+            checkDataSets(obsData, preData);
+
+            //calculate sum of the square residuals
+            double corected = 0;
+            for (int i = 0; i < obsData.Length; i++)
+            {
+                if(obsData[i] == preData[i])
+                    corected ++;
+            }
+            return corected/obsData.Length;
+        }
+        /// <summary>
+        /// Calculate Classification Error
+        /// </summary>
+        /// <param name="obsData">Observer data</param>
+        /// <param name="preData">Predicted data</param>
+        /// <returns></returns>
+        public static double CE(this double[] obsData, double[] preData)
+        {
+            checkDataSets(obsData, preData);
+
+            //calculate sum of the square residuals
+            double corected = 0;
+            for (int i = 0; i < obsData.Length; i++)
+            {
+                if (obsData[i] == preData[i])
+                    corected++;
+            }
+            return 1.0 - corected / obsData.Length;
+        }
+        /// <summary>
         /// Calculate Absolute error of two data sets
         /// </summary>
         /// <param name="obsData">Observer data</param>

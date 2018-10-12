@@ -116,6 +116,9 @@
     <None Include="..\..\GPdotNET.snk">
       <Link>GPdotNET.snk</Link>
     </None>
+    <None Include="..\..\README.md">
+      <Link>README.md</Link>
+    </None>
     <None Include="App.config" />
     <None Include="packages.config" />
     <Content Include="Resources\concrete_slump_test.gpa">

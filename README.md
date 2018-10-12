@@ -1,5 +1,7 @@
 # Latest release
 
+* october, 12, 2018:[GPdotNET v5.1.24.05.2018](https://github.com/bhrnjica/gpdotnet/releases/tag/v5.1.12.10.2018) -brings bug-fix sor ribbot popup button for save commands, and other minor code changes. 
+
 * may, 24, 2018: [GPdotNET v5.1.24.05.2018](https://github.com/bhrnjica/gpdotnet/releases/tag/v5.1.24.05.2018) -brings few bug-fixes recognized on non English PCs, which identified the localization issues with comma decimal symbol. 
 
 * april, 16, 2018: [GPdotNET v5.1.16.04.2018](https://github.com/bhrnjica/gpdotnet/releases/tag/v5.1) - version 5.1 which brings few new features e.g.:encoding category columns, application improvements, ...

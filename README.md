@@ -1,5 +1,5 @@
 [![DOI](https://zenodo.org/badge/126142815.svg)](https://zenodo.org/badge/latestdoi/126142815)
-[![license](https://img.shields.io/github/license/mashape/apistatus.svg?maxAge=2592000)](https://github.com/bhrnjica/gpdotnet/blob/master/LICENSE.md)
+[![license](https://img.shields.io/github/license/mashape/apistatus.svg?maxAge=2592000)](https://github.com/bhrnjica/gpdotnet/blob/master/license.md)
 # Latest release
 
 * october, 12, 2018:[GPdotNET v5.1.24.05.2018](https://github.com/bhrnjica/gpdotnet/releases/tag/v5.1.12.10.2018) -brings bug-fix for ribbon popup button for save and save as commands, and other minor code changes. 

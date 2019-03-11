@@ -9,8 +9,8 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyDescription("GPdotNET genetic programming tool.")]
 [assembly: AssemblyConfiguration(".NET Framework")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("GPdotNET v5.1")]
-[assembly: AssemblyCopyright("Copyright © Bahrudin Hrnjica 2006-2018")]
+[assembly: AssemblyProduct("GPdotNET v5.1.1")]
+[assembly: AssemblyCopyright("Copyright © Bahrudin Hrnjica 2006-2019")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 

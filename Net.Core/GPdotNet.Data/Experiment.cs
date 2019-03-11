@@ -579,7 +579,8 @@ namespace GPdotNet.Data
         public List<ColumnData> GetColumnsFromInput(bool testData = false)
         {
             var data = GetData(testData);
-
+            if (data == null)
+                return null;
             return data.Where(x => !x.IsOutput).ToList();
         }
        

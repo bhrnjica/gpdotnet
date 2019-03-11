@@ -130,7 +130,34 @@ namespace GPdotNet.Wnd.GUI
                 initTreeDrawer();
 
             treeCtrlDrawer1.DrawTreeExpression(model.expressionTree, Globals.FunctionFromId,param);
-            
+
+            //show constance
+            showConstances(param);
+        }
+
+        private void showConstances(Parameters param)
+        {
+            listView1.Clear();
+            if (param.Constants == null || param.Constants.Length < 1)
+                return;
+            //
+            var colHeader = new ColumnHeader();
+            colHeader.Text = "Const";
+            colHeader.Width = 40;
+            listView1.Columns.Add(colHeader);
+            colHeader = new ColumnHeader();
+            colHeader.Text = "Value";
+            colHeader.Width = 60;
+            listView1.Columns.Add(colHeader);
+
+            for(int i=0; i< param.Constants.Length; i++)
+            {
+
+                var LVI2 = listView1.Items.Add($"r{i+1}");
+                var itm = new ListViewItem.ListViewSubItem();
+                itm.Text = param.Constants[i].ToString();
+                LVI2.SubItems.Add(itm);
+            }
         }
 
         public void Reset()
@@ -140,6 +167,7 @@ namespace GPdotNet.Wnd.GUI
             treeCtrlDrawer1.Clear();
             solutionExpression.Text = "";
             m_bestSolution = null;
+            listView1.Clear();
         }
 
       

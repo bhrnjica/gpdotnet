@@ -27,7 +27,7 @@ namespace GPdotNet.Export
                     //Add Data.
                     var cols = experiment.GetColumnsFromInput();
                     var outCol = experiment.GetColumnsFromOutput(false).FirstOrDefault();
-                    string cmd = "training_data_set={";
+                    string cmd = "trainingDataSet={";
                     for (int i = 0; i < experiment.GetRowCount(false); i++)
                     {
                         string line = "{";

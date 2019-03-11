@@ -96,7 +96,7 @@ namespace GPdotNet.Export
 
                     //create training and testing data frame
                     var trainingDataset = createDataFrame(experiment,false);
-                    var testingDataset = createDataFrame(experiment, true);
+                    var testingDataset = experiment.IsTestDataExist()?createDataFrame(experiment, true):"";
 
 
                     //add arguments to the model
@@ -119,7 +119,10 @@ namespace GPdotNet.Export
                         arguments = arguments.Substring(0, arguments.Length - 1);
                     //calculate output column for training and testing data set
                     var calcTrain = "training_set$Ygp <- apply(training_set, 1, function(x) gpModel(" + calcArguments.Substring(0,calcArguments.Length-1) + "));";// x[1], x[2], x[3], x[4]));";
-                    var calcTest = "testing_set$Ygp <- apply(testing_set, 1, function(x) gpModel(" + calcArguments.Substring(0, calcArguments.Length - 1)+ "));";// x[1], x[2], x[3], x[4]));"
+
+                    string calcTest = "";
+                    if(!string.IsNullOrEmpty(testingDataset))
+                        calcTest = "testing_set$Ygp <- apply(testing_set, 1, function(x) gpModel(" + calcArguments.Substring(0, calcArguments.Length - 1)+ "));";// x[1], x[2], x[3], x[4]));"
 
                     //construct function
                     formula = @"gpModel<- function("+arguments+") {"+Environment.NewLine + formula+ Environment.NewLine +"};";

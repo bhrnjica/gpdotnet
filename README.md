@@ -1,5 +1,6 @@
 [![DOI](https://zenodo.org/badge/126142815.svg)](https://zenodo.org/badge/latestdoi/126142815)
 [![license](https://img.shields.io/github/license/mashape/apistatus.svg?maxAge=2592000)](https://github.com/bhrnjica/gpdotnet/blob/master/license.md)
+![developed by](https://avatars3.githubusercontent.com/u/12556447?s=75&u=f2cd3be70373c9654b9d53a4f69ddfd7a8ed6596&v=4=)
 # Latest release
 
 * march, 11, 2019: [GPdotNET v5.1.11.03.2019](https://github.com/bhrnjica/gpdotnet/releases/tag/v5.1.11.03.2019) -brings bug-fix for exporting into R when validation data set is not defined #4. Random constance are show in Result page #3. 

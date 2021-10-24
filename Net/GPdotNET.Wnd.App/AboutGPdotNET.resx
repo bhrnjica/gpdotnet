@@ -122,10 +122,10 @@
 This program is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; either version 2 of the License, or (at your option) any later version. This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more details."</value>
   </data>
   <data name="textBox1.Text" xml:space="preserve">
-    <value>Since 2009 when GPdotNET became open source, I have 
-received hundreds of emails from the users who send me various kind of questions, bug reports or thank you email. To all those wonderful people, I express my gratitude.
+    <value>Since 2009 when GPdotNET became an open source project, I have 
+received hundreds of emails from  users who send me various kind of questions, bug reports or thank you email. To all those wonderful people, I express my gratitude.
 
 Special thanks goes to Dr. Ali Danandeh Mehr for his great help in testing and feature planning during GPdotNET v5 development.
-.</value>
+</value>
   </data>
 </root>

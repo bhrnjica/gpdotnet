@@ -7,10 +7,10 @@ using System.Runtime.InteropServices;
 // associated with an assembly.
 [assembly: AssemblyTitle("GPdotNET v5")]
 [assembly: AssemblyDescription("GPdotNET genetic programming tool.")]
-[assembly: AssemblyConfiguration(".NET Framework")]
+[assembly: AssemblyConfiguration(".NET Framework 4.8")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("GPdotNET v5.1.1")]
-[assembly: AssemblyCopyright("Copyright © Bahrudin Hrnjica 2006-2019")]
+[assembly: AssemblyProduct("GPdotNET v5.1.2")]
+[assembly: AssemblyCopyright("Copyright © Bahrudin Hrnjica 2006-2021")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 

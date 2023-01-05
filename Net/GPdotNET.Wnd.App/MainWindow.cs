@@ -4,7 +4,7 @@ using GPdotNet.Modeling;
 using GPdotNet.Wnd.Dll;
 using GPdotNet.Wnd.Dll.Dialogs;
 using GPdotNet.Wnd.GUI;
-using Newtonsoft.Json;
+
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;

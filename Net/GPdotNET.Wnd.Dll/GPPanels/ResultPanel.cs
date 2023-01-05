@@ -118,7 +118,7 @@ namespace GPdotNet.Wnd.GUI
             if (ch == null)
                 return;
             var model = (GPdotNet.Core.Chromosome)ch;
-            if (model == null)
+            if (model == null || model.expressionTree == null)
                 return;
             m_bestSolution = ch;
             Parameters = param;

@@ -18,11 +18,12 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.Threading;
 using System.Threading.Tasks;
-using Newtonsoft.Json;
+using System.Text.Json;
 using System.Runtime.Serialization;
 using System.Globalization;
 using GPdotNet.Core;
 using GPdotNet.Data;
+using System.Text.Json.Serialization;
 
 namespace GPdotNet.Modeling
 {
@@ -84,15 +85,21 @@ namespace GPdotNet.Modeling
         {
             Guid = guid;
         }
+        [JsonIgnore(Condition = JsonIgnoreCondition.Always)]
         public string Guid { get; set; }
+        [JsonIgnore(Condition = JsonIgnoreCondition.Always)]
         public Factory Factory { get; set; }
+        [JsonIgnore(Condition = JsonIgnoreCondition.Always)]
         public IData Inputs { get; set; }
+        [JsonIgnore(Condition = JsonIgnoreCondition.Always)]
         public String ModelName { get; set; }
-        
+
+        [JsonIgnore(Condition = JsonIgnoreCondition.Always)]
         public Experiment ExpData { get; set; }
         //public string ExpString { get; set; }
+        [JsonIgnore(Condition = JsonIgnoreCondition.Always)]
         public Project Project { get; set; }
-
+        [JsonIgnore(Condition = JsonIgnoreCondition.Always)]
         public bool IsDiry { get; set; }
 
         public void InitNewModel()

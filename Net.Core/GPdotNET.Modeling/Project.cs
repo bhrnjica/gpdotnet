@@ -18,11 +18,13 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.Threading;
 using System.Threading.Tasks;
-using Newtonsoft.Json;
+using System.Text.Json;
 using System.Runtime.Serialization;
 using System.Globalization;
 using System.Collections.ObjectModel;
 using System.IO;
+using System.Text.Json.Serialization;
+using GPdotNet.Core;
 
 namespace GPdotNet.Modeling
 {
@@ -33,14 +35,16 @@ namespace GPdotNet.Modeling
      [DataContract]
     public class Project
     {
+        [JsonIgnore(Condition = JsonIgnoreCondition.Always)]
         public Func<string> GetExperimentData { get; set; }
+        [JsonIgnore(Condition = JsonIgnoreCondition.Always)]
         public Func<DataSet1> GetDataSet { get; set; }
 
-
+        [JsonIgnore(Condition = JsonIgnoreCondition.Always)]
         public string Guid { get; set; }
         [DataMember]
         public string Name { get; set; }
-        [DataMember]
+        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
         public string Data { get; set; }
         [DataMember]
         public DataSet1 DataSet { get; set; }
@@ -50,6 +54,7 @@ namespace GPdotNet.Modeling
         public string ProjectInfo { get; set; }
         [DataMember]
         public List<Model> Models { get; set; }
+        [JsonIgnore(Condition = JsonIgnoreCondition.Always)]
         public bool IsDirty { get; set; }
 
         public Project(string guid)
@@ -96,9 +101,9 @@ namespace GPdotNet.Modeling
         public void Save(string strPath)
         {
              
-            JsonSerializerSettings sett = new JsonSerializerSettings();
-            sett.NullValueHandling = NullValueHandling.Ignore;
-            var str = JsonConvert.SerializeObject(this, sett);
+            //JsonSerializerSettings sett = new JsonSerializerSettings();
+            //sett.NullValueHandling = NullValueHandling.Ignore;
+            var str = JsonSerializer.Serialize(this);
             
             System.IO.File.WriteAllText(strPath, str);
         }
@@ -107,15 +112,15 @@ namespace GPdotNet.Modeling
         {
             try
             {
-                JsonSerializerSettings sett = new JsonSerializerSettings();
-                sett.NullValueHandling = NullValueHandling.Ignore;
+                //JsonSerializerSettings sett = new JsonSerializerSettings();
+                //sett.NullValueHandling = NullValueHandling.Ignore;
 
                 var strJson = System.IO.File.ReadAllText(filePath);
-                var obj = JsonConvert.DeserializeObject(strJson, sett);
-                var d = ((dynamic)obj)["DataSet"] as Newtonsoft.Json.Linq.JObject;
-                var mods = ((dynamic)obj)["Models"] as Newtonsoft.Json.Linq.JArray;
-                var name = ((dynamic)obj)["Name"] as Newtonsoft.Json.Linq.JValue;
-                var projectInfo = ((dynamic)obj)["ProjectInfo"] as Newtonsoft.Json.Linq.JValue;
+                var obj = JsonSerializer.Deserialize<IDictionary<string, object>>(strJson);
+                var d = obj["DataSet"];
+                var mods = obj["Models"];
+                var name = obj["Name"].ToString();
+                var projectInfo = obj["ProjectInfo"];
 
 
                 //create NET Project object from Json
@@ -123,13 +128,13 @@ namespace GPdotNet.Modeling
                 var project = new Project(guid);
                 project.Name = (string)name;
 
-                project.DataSet = d.ToObject<DataSet1>();
+                project.DataSet = JsonSerializer.Deserialize<DataSet1>(d.ToString());
                 project.FilePath = filePath;
-                project.ProjectInfo = (string)projectInfo;
+                project.ProjectInfo = projectInfo.ToString();
 
                 //
                 //de-serialize models
-                Model[] mod = mods.ToObject<Model[]>();
+                Model[] mod = JsonSerializer.Deserialize<Model[]>(mods.ToString());// mods.ToObject<Model[]>();
                 foreach (var m in mod)
                 {
                     var g = System.Guid.NewGuid().ToString();
@@ -140,9 +145,15 @@ namespace GPdotNet.Modeling
 
                     var mm = new Model(g);
                     mm.Factory = m.Factory;
+
+                    Chromosome ch = mm.Factory.Population.Chromosomes[0] as Chromosome;
+                    if( ch != null )
+                        mm.Factory.ProgresReport.BestSolution= ch;    
+
                     mm.Name = m.Name;
                     mm.DataSet = m.DataSet;
                     mm.ExpData = exp;
+                    
                     //mm.SetParent(pController);
                     mm.InitPersistedModel();
                     //project.Models.Add(mm);

@@ -18,9 +18,10 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.Threading;
 using System.Threading.Tasks;
-using Newtonsoft.Json;
 using System.Runtime.Serialization;
 using System.Globalization;
+using System.Text.Json;
+
 
 namespace GPdotNet.Core
 {
@@ -126,12 +127,11 @@ namespace GPdotNet.Core
 
         public string GPFactoryToString()
         {
-            JsonSerializerSettings sett = new JsonSerializerSettings();
-            sett.NullValueHandling = NullValueHandling.Ignore;
+
             string popStr = m_Parameters == null || m_Population == null ? "" : m_Population.PopulationToString();
             if (m_History == null)
                 m_History = new List<Evolution>();
-            var jsonStr = JsonConvert.SerializeObject( new
+            var jsonStr = JsonSerializer.Serialize( new
                                 {
                                     m_Parameters,
                                     m_TerminalSet,
@@ -140,7 +140,7 @@ namespace GPdotNet.Core
                                     m_TerminationCriteria,
                                     history= m_History.ToArray(),
                                     popStr
-                                 }, sett);
+                                 });
             return jsonStr;
         }
 
@@ -151,31 +151,38 @@ namespace GPdotNet.Core
             try
             {
                 Evolution[] hist=null;
-                JsonSerializerSettings sett = new JsonSerializerSettings();
-                sett.NullValueHandling = NullValueHandling.Ignore;
+                //JsonSerializerSettings sett = new JsonSerializerSettings();
+                //sett.NullValueHandling = NullValueHandling.Ignore;
+                var opt = new JsonSerializerOptions();
                 
-                var obj = JsonConvert.DeserializeObject(strFactory, sett);
 
-                var param= ((dynamic)obj)["m_Parameters"] as Newtonsoft.Json.Linq.JObject;
-                var ter = ((dynamic)obj)["m_TerminalSet"] as Newtonsoft.Json.Linq.JArray;
-                var fun = ((dynamic)obj)["m_FunctionSet"] as Newtonsoft.Json.Linq.JArray;
-                var prog = ((dynamic)obj)["m_progresReport"] as Newtonsoft.Json.Linq.JObject;
-                var tc = ((dynamic)obj)["m_TerminationCriteria"] as Newtonsoft.Json.Linq.JObject;
-                var hi = ((dynamic)obj)["history"] as Newtonsoft.Json.Linq.JArray;
-                var pop = ((dynamic)obj)["popStr"] as Newtonsoft.Json.Linq.JValue;
+                var obj = JsonSerializer.Deserialize<IDictionary<string, object>>(strFactory, new JsonSerializerOptions());
 
-                if(param!=null)
-                    m_Parameters = param.ToObject<Parameters>();
+                var param = obj["m_Parameters"].ToString();
+                var ter = obj["m_TerminalSet"];
+                var fun = obj["m_FunctionSet"];
+                var prog = obj["m_progresReport"];
+                var tc = obj["m_TerminationCriteria"];
+                var hi = obj["history"];
+                var pop = obj["popStr"];
+
+                if(param != null)
+                    m_Parameters = JsonSerializer.Deserialize<Parameters>(param);
+                
                 if (ter != null)
-                    m_TerminalSet = ter.ToObject<int[]>();
-                if(fun!=null)
-                    m_FunctionSet = fun.ToObject<Function[]>();
-                if(prog!=null)
-                    m_progresReport = prog.ToObject<ProgressReport>();
-                if(tc!=null)
-                    m_TerminationCriteria = tc.ToObject<TerminationCriteria>();
+                    m_TerminalSet = JsonSerializer.Deserialize<int[]>(ter.ToString()); 
+
+                if(fun != null)
+                    m_FunctionSet = JsonSerializer.Deserialize<Function[]>(fun.ToString());
+
+                if (prog != null)
+                    m_progresReport = JsonSerializer.Deserialize<ProgressReport>(prog.ToString());
+
+                if (tc != null)
+                    m_TerminationCriteria = JsonSerializer.Deserialize<TerminationCriteria>(tc.ToString()); 
+                
                 if (hi != null)
-                    hist = hi.ToObject<Evolution[]>();
+                    hist = JsonSerializer.Deserialize<Evolution[]>(hi.ToString());
 
                 //create history
                 if (hist != null)
@@ -185,7 +192,7 @@ namespace GPdotNet.Core
 
                 if (pop !=null)
                 {
-                    var popStr = pop.ToObject<string>();
+                    var popStr = pop.ToString(); 
                     m_Population.PopulationFromString(popStr);
                 }
                

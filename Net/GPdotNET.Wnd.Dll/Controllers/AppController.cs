@@ -1,11 +1,12 @@
 ﻿using GPdotNet.BasicTypes;
 using GPdotNet.Modeling;
 using GPdotNet.Wnd.GUI;
-using Newtonsoft.Json;
+
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Text.Json;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -209,8 +210,8 @@ namespace GPdotNet.Wnd.Dll
                 pController.PrepareForSave();
                 //
                 Project project = pController.Project;
-                JsonSerializerSettings sett = new JsonSerializerSettings();
-                sett.NullValueHandling = NullValueHandling.Ignore;
+                //JsonSerializerSettings sett = new JsonSerializerSettings();
+                //sett.NullValueHandling = NullValueHandling.Ignore;
 
                 //set experiment filename
                 project.FilePath = filePath;
@@ -235,7 +236,7 @@ namespace GPdotNet.Wnd.Dll
                     m.PrepareForSave(mContr.ActiveData);
                 }
                 //
-                var str = JsonConvert.SerializeObject(project, sett);
+                var str = JsonSerializer.Serialize(project);
                 System.IO.File.WriteAllText(filePath, str);
                 project.IsDirty = false;
                 return true;

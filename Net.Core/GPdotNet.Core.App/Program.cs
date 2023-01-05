@@ -6,9 +6,9 @@ using System.Threading;
 using GPdotNet.Data;
 using GPdotNet.Interfaces;
 using GPdotNet.BasicTypes;
-using Newtonsoft.Json.Linq;
+
 using System.IO;
-using Newtonsoft.Json;
+
 using GPdotNet.Modeling;
 using System.Collections.Generic;
 

@@ -19,7 +19,7 @@ namespace gpdotnet.xunit
             //"history";
             //"popStr";
 
-            string facStr = "{\"m_Parameters\":{\"InitializationMethod\":2,\"SelectionMethod\":0,\"PopulationSize\":500,\"MaxLevel\":8,\"MaxInitLevel\":5,\"BroodSize\":1,\"CrossoverProbability\":0.9,\"MutationProbability\":0.05,\"SelectionProbability\":0.2,\"OutputType\":3,\"RootFunctionNode\":{\"Id\":2050,\"Name\":\"SSigmoid\",\"Arity\":1,\"HasParameter\":true,\"Parameter\":7.0,\"Weight\":0,\"Selected\":false,\"Parameter2\":7.0},\"RootName\":3,\"Threshold\":0.0,\"ParallelProcessing\":true,\"Elitism\":1,\"TourSize\":0,\"ArgValue\":0.0,\"ConstFrom\":-5.0,\"ConstTo\":1.0,\"ConstNum\":3,\"Constants\":[-3.96387,-0.33659,-1.10364],\"ProtectedOperation\":true,\"FitnessName\":6},"+
+            string facStr = "{\"m_Parameters\":{\"InitializationMethod\":2,\"SelectionMethod\":0,\"PopulationSize\":500,\"MaxLevel\":8,\"MaxInitLevel\":5,\"BroodSize\":1,\"CrossoverProbability\":0.9,\"MutationProbability\":0.05,\"SelectionProbability\":0.2,\"OutputType\":3,\"RootFunctionNode\":{\"Id\":2050,\"Name\":\"SSigmoid\",\"Arity\":1,\"HasParameter\":true,\"Parameter\":7.0,\"Weight\":0,\"Selected\":false,\"Parameter2\":7.0},\"RootName\":\"None\",\"Threshold\":0.0,\"ParallelProcessing\":true,\"Elitism\":1,\"TourSize\":0,\"ArgValue\":0.0,\"ConstFrom\":-5.0,\"ConstTo\":1.0,\"ConstNum\":3,\"Constants\":[-3.96387,-0.33659,-1.10364],\"ProtectedOperation\":true,\"FitnessName\":\"RMSE\"},"+
                              "\"m_TerminalSet\":[1000,1001,1002,1003,1004,1005],"+
                              "\"m_FunctionSet\":[{\"Id\":2000,\"Name\":\"+\",\"Arity\":2,\"HasParameter\":false,\"Parameter\":0.0,\"Weight\":1,\"Selected\":true,\"Parameter2\":0.0},{\"Id\":2001,\"Name\":\"-\",\"Arity\":2,\"HasParameter\":false,\"Parameter\":0.0,\"Weight\":1,\"Selected\":true,\"Parameter2\":0.0},{\"Id\":2002,\"Name\":\"*\",\"Arity\":2,\"HasParameter\":false,\"Parameter\":0.0,\"Weight\":1,\"Selected\":true,\"Parameter2\":0.0},{\"Id\":2003,\"Name\":\"/\",\"Arity\":2,\"HasParameter\":false,\"Parameter\":0.0,\"Weight\":1,\"Selected\":true,\"Parameter2\":0.0},{\"Id\":2019,\"Name\":\"1/x\",\"Arity\":1,\"HasParameter\":false,\"Parameter\":0.0,\"Weight\":1,\"Selected\":false,\"Parameter2\":0.0},{\"Id\":2020,\"Name\":\"abs\",\"Arity\":1,\"HasParameter\":false,\"Parameter\":0.0,\"Weight\":1,\"Selected\":false,\"Parameter2\":0.0},{\"Id\":2025,\"Name\":\"sin\",\"Arity\":1,\"HasParameter\":false,\"Parameter\":0.0,\"Weight\":1,\"Selected\":false,\"Parameter2\":0.0}],"+
                              "\"m_progresReport\":{\"SolutionStarted\":\"0001-01-01T00:00:00\",\"IterationStatistics\":{\"MaximumFitness\":95.44,\"AverageFitness\":-61.2249,\"IterationSeconds\":0.2786654},\"Iteration\":181,\"BestSolution\":{\"expressionTree\":{\"marked\":false,\"Children\":[{\"marked\":false,\"Children\":[{\"marked\":false,\"Children\":[{\"marked\":false,\"Children\":[{\"marked\":false,\"Children\":[{\"marked\":false,\"Level\":5,\"Value\":1002,\"NodeName\":\"T2\"},{\"marked\":false,\"Level\":5,\"Value\":1005,\"NodeName\":\"T5\"}],\"Level\":4,\"Value\":2001,\"NodeName\":\"-\"},{\"marked\":false,\"Level\":4,\"Value\":1002,\"NodeName\":\"T2\"}],\"Level\":3,\"Value\":2002,\"NodeName\":\"*\"}],\"Level\":2,\"Value\":2019,\"NodeName\":\"1/x\"}],\"Level\":1,\"Value\":2025,\"NodeName\":\"sin\"}],\"Level\":0,\"Value\":2050,\"NodeName\":\"ssigmoid\"},\"Fitness\":95.44},\"BestIteration\":98,\"IterationStatus\":2,\"Message\":\"C=0.002 sec; M=0.000 sec; E=0.220 sec; S=0.056 sec; S=0.000 sec; \"},"+
@@ -49,8 +49,38 @@ namespace gpdotnet.xunit
 
             //Assert.True(true);
         }
+        [Fact]
+        public void prepareCHromosome()
+        {
+            //var par= new Parameters()
+            //{
+            //    InitializationMethod= InitializationMethod.HalfHalf,
+            //    SelectionMethod= SelectionMethod.FitnessProportionateSelection,
+            //    PopulationSize=500,
+            //    MaxLevel=8,
+            //    MaxInitLevel=5,
+            //    BroodSize=1,
+            //    CrossoverProbability=0.9f,
+            //    MutationProbability=0.05f,
+            //    SelectionProbability=0.2f,
+            //    OutputType= GPdotNet.BasicTypes.ColumnType.Category,
+            //    RootFunctionNode= new GPdotNet.BasicTypes.Function()
+            //    {
+            //        Id=2050,
+            //        Name="SSIgmoind",
+            //        Arity=1,
+            //        HasParameter= true,
+            //        Parameter= 7.0,
+            //        Weight=0,
+            //        Selected=false,
+            //        Parameter2=7.0f
+            //    },
+            //    RootName= ,
 
-       
+
+            //}        
+        }
+
 
         //[Fact]
         //public void prepareCHromosome()

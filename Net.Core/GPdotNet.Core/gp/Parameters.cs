@@ -18,10 +18,12 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.Threading;
 using System.Threading.Tasks;
-using Newtonsoft.Json;
+
 using System.Runtime.Serialization;
 using System.Globalization;
 using static System.Math;
+using System.Text.Json.Serialization;
+
 namespace GPdotNet.Core
 {
     public enum IterationStatus
@@ -83,10 +85,10 @@ namespace GPdotNet.Core
         [DataMember]
         public int Elitism { get; set; }
         //[DataMember]
-        //public int TourSize { get; set; }
+        public int TourSize { get; set; }
         [DataMember]
         public float ArgValue { get; set; }
-        //[DataMember]
+        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
         public IFitness FitnessFunction { get; set; }
         [DataMember]
         public float ConstFrom { get; set; }

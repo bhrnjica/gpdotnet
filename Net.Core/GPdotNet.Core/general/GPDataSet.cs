@@ -64,8 +64,11 @@ namespace GPdotNet.Core
             var ch = ((Chromosome)chromosome);
             var node = ch.expressionTree;
 
-            if (TData == null && isTrainingData == false)//there is no test data
+            if (TData == null && isTrainingData == false )//there is no test data
                 return null;
+
+            if(node==null)
+                return null;    
 
             var rowCount = isTrainingData ? Data.Length : TData.Length;
             var y = new double[rowCount];

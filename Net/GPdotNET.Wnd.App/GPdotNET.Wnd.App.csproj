@@ -1,16 +1,8 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
-    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{ECFDABEE-16FE-4084-B518-533709A768A8}</ProjectGuid>
+    <TargetFramework>net7.0-windows</TargetFramework>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>GPdotNet.Wnd.App</RootNamespace>
     <AssemblyName>GPdotNetv5</AssemblyName>
-    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
-    <FileAlignment>512</FileAlignment>
-    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <IsWebBootstrapper>false</IsWebBootstrapper>
     <PublishUrl>publish\</PublishUrl>
     <Install>true</Install>
@@ -26,26 +18,9 @@
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <BootstrapperEnabled>true</BootstrapperEnabled>
-    <TargetFrameworkProfile />
-  </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
-    <DebugSymbols>true</DebugSymbols>
-    <DebugType>full</DebugType>
-    <Optimize>false</Optimize>
-    <OutputPath>bin\Debug\</OutputPath>
-    <DefineConstants>DEBUG;TRACE</DefineConstants>
-    <ErrorReport>prompt</ErrorReport>
-    <WarningLevel>4</WarningLevel>
-  </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
-    <DebugType>pdbonly</DebugType>
-    <Optimize>true</Optimize>
-    <OutputPath>bin\Release\</OutputPath>
-    <DefineConstants>TRACE</DefineConstants>
-    <ErrorReport>prompt</ErrorReport>
-    <WarningLevel>4</WarningLevel>
+    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+    <UseWindowsForms>true</UseWindowsForms>
+    <ImportWindowsDesktopTargets>true</ImportWindowsDesktopTargets>
   </PropertyGroup>
   <PropertyGroup>
     <ApplicationIcon>Images\gpdotnet.ico</ApplicationIcon>
@@ -60,57 +35,6 @@
     <AssemblyOriginatorKeyFile>..\..\GPdotNET.snk</AssemblyOriginatorKeyFile>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="netstandard" />
-    <Reference Include="Newtonsoft.Json, Version=10.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\Newtonsoft.Json.10.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
-    </Reference>
-    <Reference Include="System" />
-    <Reference Include="System.Core" />
-    <Reference Include="System.Xml.Linq" />
-    <Reference Include="System.Data.DataSetExtensions" />
-    <Reference Include="Microsoft.CSharp" />
-    <Reference Include="System.Data" />
-    <Reference Include="System.Deployment" />
-    <Reference Include="System.Drawing" />
-    <Reference Include="System.Windows.Forms" />
-    <Reference Include="System.Xml" />
-    <Reference Include="ZedGraph, Version=5.1.7.430, Culture=neutral, PublicKeyToken=02a83cbd123fcd60, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\ZedGraph.5.1.7\lib\net35-Client\ZedGraph.dll</HintPath>
-    </Reference>
-  </ItemGroup>
-  <ItemGroup>
-    <Compile Include="AboutGPdotNET.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="AboutGPdotNET.designer.cs">
-      <DependentUpon>AboutGPdotNET.cs</DependentUpon>
-    </Compile>
-    <Compile Include="MainWindow.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="MainWindow.Designer.cs">
-      <DependentUpon>MainWindow.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Program.cs" />
-    <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="AboutGPdotNET.resx">
-      <DependentUpon>AboutGPdotNET.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="MainWindow.resx">
-      <DependentUpon>MainWindow.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Properties\Resources.resx">
-      <Generator>ResXFileCodeGenerator</Generator>
-      <SubType>Designer</SubType>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
-    </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Resources.resx</DependentUpon>
-    </Compile>
-  </ItemGroup>
-  <ItemGroup>
     <Content Include="License-LGPL.txt" />
     <Content Include="ToDo.txt" />
     <None Include="..\..\GPdotNET.snk">
@@ -119,8 +43,6 @@
     <None Include="..\..\README.md">
       <Link>README.md</Link>
     </None>
-    <None Include="App.config" />
-    <None Include="packages.config" />
     <Content Include="Resources\concrete_slump_test.gpa">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
@@ -162,38 +84,13 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\Net.Core\GPdotNet.Core\GPdotNet.Core.csproj">
-      <Project>{fe5774dc-eb91-425c-86b7-51f792c78a3a}</Project>
-      <Name>GPdotNet.Core</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\Net.Core\GPdotNet.Data\GPdotNet.Data.csproj">
-      <Project>{01ad8460-3221-47c5-9ff3-38f12255fd96}</Project>
-      <Name>GPdotNet.Data</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\Net.Core\GPdotNet.Interfaces\GPdotNet.Interfaces.csproj">
-      <Project>{9df71459-9fae-460c-a923-9bb0214f5bc7}</Project>
-      <Name>GPdotNet.Interfaces</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\Net.Core\GPdotNET.Math\GPdotNET.MathStuff.csproj">
-      <Project>{e4bdf9ac-32c1-4467-9ba9-64c240c16775}</Project>
-      <Name>GPdotNET.MathStuff</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\Net.Core\GPdotNET.Modeling\GPdotNet.Modeling.csproj">
-      <Project>{eaec380c-051a-49d9-9e4b-6302ce1624fb}</Project>
-      <Name>GPdotNet.Modeling</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\GPdotNET.Export\GPdotNet.Export.csproj">
-      <Project>{dfc01f94-1528-4dd6-afbc-42def6433d18}</Project>
-      <Name>GPdotNet.Export</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\GPdotNET.Wnd.Dll\GPdotNet.Wnd.Dll.csproj">
-      <Project>{9564581d-0dcf-4ef4-92e7-30afc346d4da}</Project>
-      <Name>GPdotNet.Wnd.Dll</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Wnd.Ribbon\Wnd.Ribbon.csproj">
-      <Project>{46a18a55-5ae8-49ce-91cd-c7421b642e7e}</Project>
-      <Name>Wnd.Ribbon</Name>
-    </ProjectReference>
+    <ProjectReference Include="..\..\Net.Core\GPdotNet.Core\GPdotNet.Core.csproj" />
+    <ProjectReference Include="..\..\Net.Core\GPdotNet.Data\GPdotNet.Data.csproj" />
+    <ProjectReference Include="..\..\Net.Core\GPdotNet.Interfaces\GPdotNet.Interfaces.csproj" />
+    <ProjectReference Include="..\..\Net.Core\GPdotNET.Math\GPdotNET.MathStuff.csproj" />
+    <ProjectReference Include="..\..\Net.Core\GPdotNET.Modeling\GPdotNet.Modeling.csproj" />
+    <ProjectReference Include="..\GPdotNET.Export\GPdotNet.Export.csproj" />
+    <ProjectReference Include="..\GPdotNET.Wnd.Dll\GPdotNet.Wnd.Dll.csproj" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Images\24\about24.png">
@@ -211,7 +108,6 @@
     <Content Include="Images\24\mathematica24.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <None Include="Images\24\newgp24.png" />
     <Content Include="Images\24\opengp24.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
@@ -331,5 +227,15 @@
       <Install>false</Install>
     </BootstrapperPackage>
   </ItemGroup>
-  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <ItemGroup>
+    <PackageReference Include="Microsoft.CSharp" Version="4.7.0" />
+    <PackageReference Include="Ribbon.Fork.NET" Version="6.0.0" />
+    <PackageReference Include="System.Data.DataSetExtensions" Version="4.5.0" />
+    <PackageReference Include="Microsoft.Windows.Compatibility" Version="7.0.0" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="ZedGraph">
+      <HintPath>..\..\packages\ZedGraph_net7\ZedGraph.dll</HintPath>
+    </Reference>
+  </ItemGroup>
 </Project>

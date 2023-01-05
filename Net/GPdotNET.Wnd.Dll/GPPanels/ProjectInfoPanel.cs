@@ -10,6 +10,7 @@
 // Bihac,Bosnia and Herzegovina                                                         //
 // http://bhrnjica.wordpress.com                                                        //
 //////////////////////////////////////////////////////////////////////////////////////////
+using DocumentFormat.OpenXml.Office2010.CustomUI;
 using System;
 using System.Collections.Generic;
 using System.Drawing;
@@ -72,22 +73,23 @@ namespace GPdotNet.Wnd.GUI
 
         private void richTextBox1_MouseUp(object sender, MouseEventArgs e)
         {
-            if (e.Button == System.Windows.Forms.MouseButtons.Right)
-            {   //click event
-                //MessageBox.Show("you got it!");
-                ContextMenu contextMenu = new System.Windows.Forms.ContextMenu();
-                MenuItem menuItem = new MenuItem("Cut");
-                menuItem.Click += new EventHandler(CutAction);
-                contextMenu.MenuItems.Add(menuItem);
-                menuItem = new MenuItem("Copy");
-                menuItem.Click += new EventHandler(CopyAction);
-                contextMenu.MenuItems.Add(menuItem);
-                menuItem = new MenuItem("Paste");
-                menuItem.Click += new EventHandler(PasteAction);
-                contextMenu.MenuItems.Add(menuItem);
+            //if (e.Button == System.Windows.Forms.MouseButtons.Right)
+            //{   //click event
+            //    //MessageBox.Show("you got it!");
+            //    var contextMenu = new System.Windows.Forms.ContextMenuStrip();
+            //    var menuItem = new MenuStrip();
+            //    menuItem.Text = "Cut";
+            //    menuItem.Click += new EventHandler(CutAction);
+            //    contextMenu.Add(menuItem);
+            //    menuItem = new MenuItem("Copy");
+            //    menuItem.Click += new EventHandler(CopyAction);
+            //    contextMenu.MenuItems.Add(menuItem);
+            //    menuItem = new MenuItem("Paste");
+            //    menuItem.Click += new EventHandler(PasteAction);
+            //    contextMenu.MenuItems.Add(menuItem);
 
-                richTextBox1.ContextMenu = contextMenu;
-            }
+            //    richTextBox1.ContextMenu = contextMenu;
+            //}
         }
         void CutAction(object sender, EventArgs e)
         {

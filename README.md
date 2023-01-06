@@ -3,6 +3,10 @@
 ![developed by](https://avatars3.githubusercontent.com/u/12556447?s=75&u=f2cd3be70373c9654b9d53a4f69ddfd7a8ed6596&v=4=)
 # Latest release
 
+* january, 05, 2023: [GPdotNET v5.1.2.24.10.2021](https://github.com/bhrnjica/gpdotnet/releases/tag/v5.1.2.05.01.2023) -brings upgrade to .NET 7.0 and switvh from `NewtonSoft.Json` to `System.Text.Json`. 
+
+* october, 24, 2021: [GPdotNET v5.1.2.24.10.2021](https://github.com/bhrnjica/gpdotnet/releases/tag/v5.1.2.24.10.2021) -brings upgrade to .NET Framework 4.8. 
+
 * march, 11, 2019: [GPdotNET v5.1.11.03.2019](https://github.com/bhrnjica/gpdotnet/releases/tag/v5.1.11.03.2019) -brings bug-fix for exporting into R when validation data set is not defined #4. Random constance are show in Result page #3. 
 
 * october, 12, 2018: [GPdotNET v5.1.12.10.2018](https://github.com/bhrnjica/gpdotnet/releases/tag/v5.1.12.10.2018) -brings bug-fix for ribbon popup button for save and save as commands, and other minor code changes. 
@@ -32,7 +36,13 @@ The previous version GPdotNET V4 has moved to http://github.com/bhrnjica/gpdotne
 GPdotNET v5 is mostly Windows application with full GUI support for modelling, exporting models in diferent tools (Excel, R language and Wolrfam Mathematica) and saving group of models in one project file (*.gpa file format). Beside main version there is a GPdotNET console application which supposed to be as GPdotNET commald lline tool. It is developed on .NET Core, thus it will be running on any OS where .NET Core is supported. Further more the GPdotNET cmd line tool is fully compatible with GUI version, and any project saved in command line version will be posible to be opened in GPdotNET v5. In order to used GPdotNET cmd, you have to clone the repository and run within Visual Studio IDE.
 
 # System requirements
-Both GPdotNET v5 and GPdotNET cmd line tool have no any special software of hardware requiremens. It is based on .NET Framework 4.7.1 and .NET Core 2.0, and few Nuget packages which can be downloaded once the solution is opened in Visual Studio.
+
+1. Windows OS
+2. NET 7.0 +
+
+## Version on .NET Framework
+
+Both GPdotNET v5 and GPdotNET cmd line tool have no any special software of hardware requiremens. All version before 2023 are on NET Framework. It is based on .NET Framework 4.8 and .NET Core 2.0, and few Nuget packages which can be downloaded once the solution is opened in Visual Studio.
 So in order to run GPdotNET the following prerequesities have to be installed:
 
 1. NET Framework 4.7.1+

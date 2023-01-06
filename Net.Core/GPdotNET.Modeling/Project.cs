@@ -147,7 +147,7 @@ namespace GPdotNet.Modeling
                     mm.Factory = m.Factory;
 
                     Chromosome ch = mm.Factory.Population.Chromosomes[0] as Chromosome;
-                    if( ch != null )
+                    if( ch != null && mm.Factory.ProgresReport.BestSolution.expressionTree == null)
                         mm.Factory.ProgresReport.BestSolution= ch;    
 
                     mm.Name = m.Name;

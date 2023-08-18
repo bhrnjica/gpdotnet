@@ -78,13 +78,9 @@
     <PackageReference Include="Microsoft.CSharp" Version="4.7.0" />
     <PackageReference Include="Ribbon.Fork.NET" Version="6.0.0" />
     <PackageReference Include="System.Data.DataSetExtensions" Version="4.5.0" />
+    <PackageReference Include="ZedGraph" Version="5.1.7" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Remove="TreeDrawers\TreeCtrlDrawer.resx" />
-  </ItemGroup>
-  <ItemGroup>
-    <Reference Include="ZedGraph">
-      <HintPath>..\..\packages\ZedGraph_net7\ZedGraph.dll</HintPath>
-    </Reference>
   </ItemGroup>
 </Project>

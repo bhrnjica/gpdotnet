@@ -207,7 +207,7 @@ namespace GPdotNet.Export
                 if(outCol.ColumnDataType== ColumnType.Category)
                     ws.Cell(i + 3, cellIndex).Value = outCol.GetNumericValue(i);
                 else
-                    ws.Cell(i + 3, cellIndex).Value = experiment.GetEncodedOutput(i, isTest, false);
+                    ws.Cell(i + 3, cellIndex).Value = experiment.GetEncodedOutput(i, isTest, false)[0];
                 cellIndex++;
                 
 
